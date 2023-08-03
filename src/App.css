@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Montserrat", sans-serif;
+}
+a,
+button,
+input {
+  outline: none;
+  font-family: inherit;
+}
+
+li {
+  list-style: none;
+}
+.swiper-button-prev {
+  height: 37px !important;
+  width: 37px !important;
+  border-radius: 50%;
+  background-color: #ff3636;
+}
+
+.swiper-button-prev::after {
+  color: white;
+  font-size: 1rem !important;
+  font-weight: 600;
+}
+.swiper-button-next {
+  width: 37px !important;
+  height: 37px !important;
+  border-radius: 50%;
+  background-color: #ff3636;
+}
+
+.swiper-button-next::after {
+  color: white;
+  font-size: 1rem !important;
+  font-weight: 600;
+}
+.bg_gradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 7%, rgba(0, 0, 0, 0) 150%);
+}
+.trailer_container {
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+.form_bg {
+  background-image: url(./assets/imges/form_bg.jpg);
+}
+.active {
+  background-color: #ff3636;
+  border-radius: 0.8rem;
+  padding: 0 0.7rem;
+}
+@media only screen and (min-width: 868px) {
+  .swiper-button-prev {
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50%;
+    background-color: #ff3636;
+  }
+
+  .swiper-button-prev::after {
+    color: white;
+    font-size: 1.5rem !important;
+    font-weight: 600;
+  }
+  .swiper-button-next {
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50%;
+    background-color: #ff3636;
+  }
+
+  .swiper-button-next::after {
+    color: white;
+    font-size: 1.5rem !important;
+    font-weight: 600;
+  }
+}

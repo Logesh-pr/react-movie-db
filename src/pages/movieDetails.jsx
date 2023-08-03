@@ -30,7 +30,7 @@ import "react-toastify/dist/ReactToastify.css";
 export default function MovieDetails() {
   const movieDetails = useSelector((state) => state.persistedReducer.movie);
   const [user] = useAuthState(auth);
-  const [favorite, setFavorite] = useState(false);
+  const [favourite, setfavourite] = useState(false);
   const [trailer, setTrailer] = useState(false);
   const navigate = useNavigate();
   const borderColor = [];
@@ -42,7 +42,7 @@ export default function MovieDetails() {
         .then((res) => {
           res.data().savedShows.filter((data) => {
             if (data.movieId === movieDetails.value.id) {
-              setFavorite(true);
+              setfavourite(true);
             }
           });
         })
@@ -91,7 +91,7 @@ export default function MovieDetails() {
         movieAdult: movieDetails.value.adult ? movieDetails.value.adult : "",
       }),
     });
-    toast.success("Added to favorite list", {
+    toast.success("Added to favourite list", {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: true,
@@ -104,7 +104,7 @@ export default function MovieDetails() {
   };
 
   const storeMovie = async () => {
-    favorite ? deletShow() : addShow();
+    favourite ? deletShow() : addShow();
   };
 
   window.addEventListener("beforeunload", () => {
@@ -185,15 +185,15 @@ export default function MovieDetails() {
             {user && (
               <div
                 className={`  cursor-pointer  px-4 py-2 ${
-                  favorite ? "bg-white text-black" : "border text-white"
+                  favourite ? "bg-white text-black" : "border text-white"
                 }  rounded-lg flex justify-center items-center gap-x-2`}
                 onClick={() => {
-                  setFavorite(!favorite);
+                  setfavourite(!favourite);
                   storeMovie();
                 }}
               >
                 <p>
-                  {favorite ? (
+                  {favourite ? (
                     <AiFillHeart className="text-[24px]" />
                   ) : (
                     <AiOutlineHeart className="text-[24px]" />
@@ -201,8 +201,8 @@ export default function MovieDetails() {
                 </p>
 
                 <p className="text-[14px] font-semibold">{`${
-                  favorite ? "Added" : "Add"
-                } to favorite`}</p>
+                  favourite ? "Added" : "Add"
+                } to favourite`}</p>
               </div>
             )}
             <Link

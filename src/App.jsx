@@ -14,7 +14,7 @@ import ScrollToTop from "./react-router/scrollTop";
 import Genres_page from "./pages/genresPage";
 import SignUp from "./pages/signUp";
 import LogIn from "./pages/logIn";
-import FavoritePage from "./pages/favoritePage";
+import FavouritePage from "./pages/favouritePage";
 
 function App() {
   return (
@@ -34,10 +34,10 @@ function App() {
             <Route path="/accounts/log-in" element={<LogIn />} />
             <Route path="/accounts/sign-up" element={<SignUp />} />
             <Route
-              path="/favorite"
+              path="/favourite"
               element={
                 <ProtectedRoute>
-                  <FavoritePage />
+                  <FavouritePage />
                 </ProtectedRoute>
               }
             />

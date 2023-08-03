@@ -10,7 +10,7 @@ export default function ShowNavBar({ children }) {
       setNavBar(true);
     } else if (location.pathname === "/genres") {
       setNavBar(true);
-    } else if (location.pathname === "/favorite") {
+    } else if (location.pathname === "/favourite") {
       setNavBar(true);
     } else setNavBar(false);
   }, [location]);

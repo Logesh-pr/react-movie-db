@@ -65,8 +65,8 @@ export default function Navbar() {
     setMenu(!menu);
   };
 
-  const FavoritePage = () => {
-    navigate("/favorite");
+  const favouritePage = () => {
+    navigate("/favourite");
     setOpen(false);
     setMenu(false);
   };
@@ -124,11 +124,11 @@ export default function Navbar() {
                   {menu && (
                     <div className=" md:absolute md:bg-secondary md:top-[80px] md:w-[200px] md:z-50 md:border md:border-gray-700 ease-in-out duration-300 rounded-xl w-[250px]  flex flex-col justify-center items-center   md:py-2 px-6">
                       <p
-                        onClick={FavoritePage}
+                        onClick={favouritePage}
                         className=" w-full py-4  flex justify-center md:justify-start  items-center gap-x-3 text-[16px] md:border-b md:border-gray-700 cursor-pointer"
                       >
                         <AiFillHeart className="text-[17px] " />
-                        Favorite list
+                        favourite list
                       </p>
                       <Link
                         onClick={logOut}

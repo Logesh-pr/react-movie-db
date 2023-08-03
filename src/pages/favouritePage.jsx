@@ -19,8 +19,8 @@ import { doc, getDoc } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function FavoritePage() {
-  const [favoriteList, setFavoriteList] = useState([]);
+export default function FavouritePage() {
+  const [favouriteList, setFavouriteList] = useState([]);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
@@ -30,7 +30,7 @@ export default function FavoritePage() {
     const getUser = async () => {
       await getDoc(docReference)
         .then((res) => {
-          setFavoriteList(res.data().savedShows);
+          setFavouriteList(res.data().savedShows);
         })
         .catch((err) => {
           toast.error(err.message, {
@@ -80,18 +80,18 @@ export default function FavoritePage() {
 
   return (
     <div className="bg-secondary  container mx-auto px-3">
-      {favoriteList === null ? (
+      {favouriteList === null ? (
         <h4 className="font-semibold  text-[22px] md:text-[28px] xl:text-[32px]">
-          Add a movie to favorite
+          Add a movie to favourite
         </h4>
       ) : (
         <>
           <h4 className="font-semibold text-[22px] md:text-[28px] xl:text-[32px]">
-            Favorite list
+            Favourite list
           </h4>
           <div className="w-[150px] h-[4px] bg-primary mt-2"></div>
           <div className=" mt-12 grid justify-center items-center grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 overflow-hidden">
-            {favoriteList?.map((result, id) => {
+            {favouriteList?.map((result, id) => {
               return (
                 <div
                   key={id}

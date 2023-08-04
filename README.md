@@ -1,6 +1,6 @@
 # Movie Database App
 
-This is a movie database app built with React, Tailwind CSS, Redux, the TMDb movie API, Firebase.
+This is a movie database app built with React, Tailwind CSS, Redux, TMDb movie API and Firebase.
 
 ## Features
 
